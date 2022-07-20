@@ -2,23 +2,9 @@ import React, { FC } from 'react';
 import { motion } from 'framer-motion';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import * as ROUTES from '../../util/Routes';
+import { SitePrimaryButton } from '../../theme/theme';
 
 interface HeroProps {}
-
-const heroButtonStyle = {
-  border: '2px solid #fff',
-  fontWeight: '700',
-  minWidth: '130px',
-  background: 'none'
-};
-
-const spacerButtonStyle = {
-  border: 'none',
-  minWidth: '130px',
-  background: 'none'
-};
-
-console.log(spacerButtonStyle);
 
 const Hero: FC<HeroProps> = () => (
   <>
@@ -70,12 +56,12 @@ const Hero: FC<HeroProps> = () => (
               >
                 <Row>
                   <Col xs="6">
-                    <Button href={ROUTES.RESUME} style={heroButtonStyle}>
+                    <Button href={ROUTES.RESUME} style={SitePrimaryButton}>
                       What I do
                     </Button>
                   </Col>
                   <Col xs="6">
-                    <Button href={ROUTES.CONTACT} style={heroButtonStyle}>
+                    <Button href={ROUTES.CONTACT} style={SitePrimaryButton}>
                       Contact
                     </Button>
                   </Col>

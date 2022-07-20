@@ -3,8 +3,9 @@ import Home from './pages/Home/Home';
 import Navigation from './components/Navigation/Navigation';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import * as ROUTES from './util/Routes';
-import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 import Resume from './pages/Resume/Resume';
+// import { Archive } from './pages/Archive/Archive';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.RESUME} element={<Resume />} />
-          <Route path={ROUTES.CONTACT} element={<About />} />
+          <Route path={ROUTES.CONTACT} element={<Contact />} />
+          {/* <Route path={ROUTES.ARCHIVE} element={<Archive />} /> */}
+
           <Route path="*" element={<a href={ROUTES.HOME}>Return</a>} />
         </Routes>
       </BrowserRouter>

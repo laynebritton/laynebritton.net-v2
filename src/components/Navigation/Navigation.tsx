@@ -12,8 +12,9 @@ const Navigation: FC<NavigationProps> = () => (
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link href={ROUTES.HOME}>Home </Nav.Link>
-          <Nav.Link href={ROUTES.RESUME}>Resume</Nav.Link>
+          <Nav.Link href={ROUTES.RESUME}>About me</Nav.Link>
           <Nav.Link href={ROUTES.CONTACT}>Contact</Nav.Link>
+          {/* <Nav.Link href={ROUTES.ARCHIVE}>Archive</Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
     </Container>
