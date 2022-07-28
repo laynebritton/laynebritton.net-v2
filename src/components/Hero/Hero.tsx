@@ -44,7 +44,7 @@ const Hero: FC<HeroProps> = () => (
                 transition={{ delay: 0.15, duration: 0.6 }}
               >
                 <p style={{ fontSize: '2rem', color: '#FFF' }}>
-                  {"I'm Layne Britton, an engineer in NYC"}
+                  {"I'm Layne Britton"}
                 </p>
               </motion.div>
 
