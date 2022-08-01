@@ -12,7 +12,7 @@ export const InitializeAnalytics = () => {
   }
 
   if (ANALYTICS_TOKEN) {
-    mixpanel.init(ANALYTICS_TOKEN);
+    mixpanel.init(ANALYTICS_TOKEN, { api_host: 'https://api.mixpanel.com' });
   }
 };
 
