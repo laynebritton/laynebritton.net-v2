@@ -6,8 +6,11 @@ import * as ROUTES from './util/Routes';
 import Contact from './pages/Contact/Contact';
 import Resume from './pages/Resume/Resume';
 // import { Archive } from './pages/Archive/Archive';
+import { InitializeAnalytics } from './util/Analytics';
 
 function App() {
+  InitializeAnalytics();
+
   return (
     <div>
       <Navigation />

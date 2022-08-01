@@ -2,6 +2,8 @@ import React, { FC } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { SitePrimaryButton } from '../../theme/theme';
 import ProfilePicture from '../../img/layne.png';
+import { TrackEvent } from '../../util/Analytics';
+import * as ANALYTICS_CONSTANTS from '../../util/AnalyticsConstants';
 
 const GoogleDriveResumeLink =
   'https://docs.google.com/document/d/1ntg-qp8GKCgLZqkCdXmn6jiNTcvupTqnP4o6Cp7Zqe4/edit';
@@ -11,6 +13,8 @@ const GitHubLink = 'https://github.com/laynebritton';
 const LinkedInLink = 'https://www.linkedin.com/in/layne-britton-85339b149/';
 
 const Resume: FC = () => {
+  TrackEvent(ANALYTICS_CONSTANTS.VIEW_ABOUT);
+
   return (
     <>
       <Container>
@@ -31,13 +35,23 @@ const Resume: FC = () => {
               href={GoogleDriveResumeLink}
               target="_blank"
               style={SitePrimaryButton}
+              onClick={() => {
+                TrackEvent(ANALYTICS_CONSTANTS.CLICK_RESUME);
+              }}
             >
               Resume
             </Button>
             <br />
             <br />
 
-            <Button href={GitHubLink} target="_blank" style={SitePrimaryButton}>
+            <Button
+              href={GitHubLink}
+              target="_blank"
+              style={SitePrimaryButton}
+              onClick={() => {
+                TrackEvent(ANALYTICS_CONSTANTS.CLICK_GITHUB);
+              }}
+            >
               GitHub
             </Button>
             <br />
@@ -47,6 +61,9 @@ const Resume: FC = () => {
               href={LinkedInLink}
               target="_blank"
               style={SitePrimaryButton}
+              onClick={() => {
+                TrackEvent(ANALYTICS_CONSTANTS.CLICK_LINKEDIN);
+              }}
             >
               LinkedIn
             </Button>
