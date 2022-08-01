@@ -1,9 +1,12 @@
 import mixpanel from 'mixpanel-browser';
 
-const CURRENT_ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
-const ANALYTICS_TOKEN = process.env.REACT_APP_MIXPANEL_ANALYTICS_TOKEN;
+let CURRENT_ENVIRONMENT: string;
+let ANALYTICS_TOKEN: string;
 
 export const InitializeAnalytics = () => {
+  CURRENT_ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT || '';
+  ANALYTICS_TOKEN = process.env.REACT_APP_MIXPANEL_ANALYTICS_TOKEN || '';
+
   if (!IsProductionEnvironment()) {
     return;
   }
@@ -22,11 +25,8 @@ export const TrackEvent = (event: string) => {
 };
 
 const IsProductionEnvironment = () => {
-  console.log(CURRENT_ENVIRONMENT);
-  console.log(ANALYTICS_TOKEN);
   if (CURRENT_ENVIRONMENT === 'prod') {
     return true;
   }
-  console.log('this is not prod');
   return false;
 };
