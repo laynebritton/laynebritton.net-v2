@@ -2,6 +2,8 @@
 
 My home page website. Built from scratch using React Typescript. 
 
+Check it out at [laynebritton.net](http://laynebritton.net)
+
 ### Features
 - Analytics using Mixpanel
 - Custom styling and layouts designed by me
