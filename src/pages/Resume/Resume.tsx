@@ -4,6 +4,10 @@ import { SitePrimaryButton } from '../../theme/theme';
 import ProfilePicture from '../../img/layne.png';
 import { TrackEvent } from '../../util/Analytics';
 import * as ANALYTICS_CONSTANTS from '../../util/AnalyticsConstants';
+import {
+  ResponsiveContent,
+  ResponsiveContentType
+} from '../../components/ResponsiveContent/ResponsiveContent';
 
 const GoogleDriveResumeLink =
   'https://docs.google.com/document/d/1ntg-qp8GKCgLZqkCdXmn6jiNTcvupTqnP4o6Cp7Zqe4/edit';
@@ -19,8 +23,7 @@ const Resume: FC = () => {
     <>
       <Container>
         <Row>
-          <Col xs="1" className={'d-xs-block d-sm-none'}></Col>
-          <Col xs="10" sm="8">
+          <ResponsiveContent type={ResponsiveContentType.COLUMN}>
             <br />
             <h1>Layne Britton</h1>
 
@@ -69,7 +72,7 @@ const Resume: FC = () => {
             </Button>
             <br />
             <br />
-          </Col>
+          </ResponsiveContent>
           <Col sm="4">
             <img
               style={{ width: '100%', borderRadius: '50%' }}
@@ -77,39 +80,32 @@ const Resume: FC = () => {
             />
           </Col>
         </Row>
-        <Row>
-          <Col xs="1" className={'d-xs-block d-sm-none'}></Col>
-          <Col xs="10" sm="8">
-            <h2>Bio</h2>
-            <p>
-              {
-                "Hello! My name is Layne. I'm an engineer currently living in Brooklyn, NY."
-              }
-            </p>
-            <br />
-            <p>
-              {
-                "Right now I'm a Software Engineer at Ribbon Home, building a platform to help regular people win offers on homes against investment banks and house flippers."
-              }
-            </p>
-            <br />
-            <p>
-              {
-                'I previously worked at BCG Digital Ventures where I built, launched, and handed-off startups to our clients. Before that I was at the Japan Research Institute America, upgrading and developing financial systems. Learn more in my resume.'
-              }
-            </p>
-            <br />
-            <p>
-              {
-                "Very interested in how technology intersects with society. Areas of interest are urban development, sustainability, education, and political activism. Please reach out if you know of any interesting projects there, especially if it's open source!"
-              }
-            </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="1" className={'d-xs-block d-sm-none'}></Col>
-          <Col xs="10" sm="8"></Col>
-        </Row>
+        <ResponsiveContent type={ResponsiveContentType.ROW}>
+          <h2>Bio</h2>
+          <p>
+            {
+              "Hello! My name is Layne. I'm an engineer currently living in Brooklyn, NY."
+            }
+          </p>
+          <br />
+          <p>
+            {
+              "Right now I'm a Software Engineer at Ribbon Home, building a platform to help regular people win offers on homes against investment banks and house flippers."
+            }
+          </p>
+          <br />
+          <p>
+            {
+              'I previously worked at BCG Digital Ventures where I built, launched, and handed-off startups to our clients. Before that I was at the Japan Research Institute America, upgrading and developing financial systems. Learn more in my resume.'
+            }
+          </p>
+          <br />
+          <p>
+            {
+              "Very interested in how technology intersects with society. Areas of interest are urban development, sustainability, education, and political activism. Please reach out if you know of any interesting projects there, especially if it's open source!"
+            }
+          </p>
+        </ResponsiveContent>
       </Container>
     </>
   );
