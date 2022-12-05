@@ -57,12 +57,12 @@ const Hero: FC<HeroProps> = () => (
                 <Row>
                   <Col xs="6">
                     <Button href={ROUTES.RESUME} style={SitePrimaryButton}>
-                      What I do
+                      About me
                     </Button>
                   </Col>
                   <Col xs="6">
-                    <Button href={ROUTES.CONTACT} style={SitePrimaryButton}>
-                      Contact
+                    <Button href={ROUTES.PROJECTS} style={SitePrimaryButton}>
+                      Projects
                     </Button>
                   </Col>
                 </Row>

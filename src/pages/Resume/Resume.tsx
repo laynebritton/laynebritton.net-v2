@@ -8,6 +8,7 @@ import {
   ResponsiveContent,
   ResponsiveContentType
 } from '../../components/ResponsiveContent/ResponsiveContent';
+import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 
 const GoogleDriveResumeLink =
   'https://docs.google.com/document/d/1ntg-qp8GKCgLZqkCdXmn6jiNTcvupTqnP4o6Cp7Zqe4/edit';
@@ -106,6 +107,87 @@ const Resume: FC = () => {
             }
           </p>
         </ResponsiveContent>
+        {/* Placing empty div here for better navigation auto-scroll */}
+        <div id="projects" />
+      </Container>
+      <Container style={{ marginTop: '5%' }}>
+        <Row>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <h1>Projects</h1>
+          </div>
+          <Col xs={1} sm={1}></Col>
+          <Col xs={10} sm={10}>
+            <Row>
+              <ProjectCard
+                title={'Infinite Dogs'}
+                description={
+                  'Scroll through dogs instead of doomscrolling. I loved the designs and theming I created for this, so I updated this site to use them too!.'
+                }
+                media={
+                  'https://s3.amazonaws.com/laynebritton.net-media/public/infinite-dogs-square-thumbnail.png'
+                }
+                projectUrl={'https://laynebritton.github.io/dog-project/'}
+                githubUrl={'https://github.com/laynebritton/dog-project'}
+                eventName={ANALYTICS_CONSTANTS.CLICK_INFINITE_DOGS}
+              />
+              <ProjectCard
+                title={'LayneBritton.net'}
+                description={
+                  'This website. Includes internal analytics, Google Cloud hosting, and AWS S3 media hosting.'
+                }
+                media={
+                  'https://s3.amazonaws.com/laynebritton.net-media/public/square-analytics-thumbnail.png'
+                }
+                projectUrl={'http://www.laynebritton.net/'}
+                projectUrlLabel={'Recursion'}
+                githubUrl={
+                  'https://github.com/laynebritton/laynebritton.net-v2'
+                }
+                eventName={ANALYTICS_CONSTANTS.CLICK_LAYNE_BRITTON_NET}
+              />
+              <ProjectCard
+                title={'Lit Hum: The Fighting Game'}
+                description={
+                  <>
+                    <span>
+                      A 2D fighting video game featuring classic literature
+                      protagonists. Winner of the{' '}
+                      <a
+                        href="https://www.college.columbia.edu/core/scholars/reflection/4135"
+                        target="_"
+                      >
+                        2020 Core Scholar award at Columbia University
+                      </a>
+                      . Built in a custom game engine I wrote and with art I
+                      spliced together from the MET, paintings, and book covers.
+                    </span>
+                  </>
+                }
+                media={
+                  'http://www.columbia.edu/~lmb2289/lit-hum-game/images/troy-battle.JPG'
+                }
+                projectUrl={
+                  'https://www.college.columbia.edu/core/scholars/reflection/4135'
+                }
+                githubUrl={'https://github.com/laynebritton/lit-hum-game'}
+                eventName={ANALYTICS_CONSTANTS.CLICK_LIT_HUM_GAME}
+              />
+              {/* <ProjectCard
+                title={'QuickAttunement for Foundry Virtual Table Top'}
+                description={
+                  'A mod I made for the tool my friends and I use to play Dungeons and Dragons. Simplifies a common user flow without introducing any new UI. See those flows in action on GitHub.'
+                }
+                media={
+                  'https://s3.amazonaws.com/laynebritton.net-media/public/d%26dfoundry-sqaure-thumbnail.png'
+                }
+                githubUrl={
+                  'https://github.com/laynebritton/QuickAttunement-FoundryVTT'
+                }
+                eventName={ANALYTICS_CONSTANTS.CLICK_GITHUB}
+              /> */}
+            </Row>
+          </Col>
+        </Row>
       </Container>
     </>
   );
