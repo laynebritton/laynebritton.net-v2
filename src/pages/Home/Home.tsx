@@ -28,15 +28,19 @@ const Home: FC<HomeProps> = () => {
       >
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.08 }}
+          animate={{ opacity: 0.175 }}
           transition={{ duration: 1.0, delay: 2.75 }}
-        >
-          <img
-            style={{ objectFit: 'cover' }}
-            src="https://s3.amazonaws.com/laynebritton.net-media/public/cold_spring_starry_sky_png_lower.png"
-            // src="https://s3.amazonaws.com/laynebritton.net-media/public/rosebud_trail_lowered_png.png"
-          ></img>
-        </motion.div>
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover',
+            // background:
+            //   'linear-gradient(to bottom, transparent, 75%, black), url("https://s3.amazonaws.com/laynebritton.net-media/public/rosebud_trail_lowered_png.png") no-repeat center center'
+            background:
+              'linear-gradient(to bottom, transparent, 70%, black), url("https://s3.amazonaws.com/laynebritton.net-media/public/cold_spring_starry_sky_png_lower.png") no-repeat center center'
+          }}
+        ></motion.div>
       </div>
       <div className={styles.Home} data-testid="Home">
         <Hero />
