@@ -133,7 +133,7 @@ const Resume: FC = () => {
               <ProjectCard
                 title={'LayneBritton.net'}
                 description={
-                  'This website. Includes internal analytics and Google Cloud compute engine hosting. Check it out on mobile and desktop.'
+                  'This website. Includes internal analytics and uses Google Cloud compute engine hosting. Check it out on mobile and desktop.'
                 }
                 media={
                   'https://s3.amazonaws.com/laynebritton.net-media/public/square-analytics-thumbnail.png'
