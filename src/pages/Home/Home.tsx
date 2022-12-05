@@ -28,8 +28,8 @@ const Home: FC<HomeProps> = () => {
       >
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.25 }}
-          transition={{ duration: 2.0, delay: 1.5 }}
+          animate={{ opacity: 0.08 }}
+          transition={{ duration: 1.0, delay: 2.75 }}
         >
           <img
             style={{ objectFit: 'cover' }}
