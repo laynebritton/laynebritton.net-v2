@@ -12,7 +12,8 @@ const Home: FC<HomeProps> = () => {
   return (
     <>
       <div
-        className={'d-md-block d-sm-none'}
+        // Hide background image on mobile
+        className={'d-none d-sm-block'}
         style={{
           position: 'absolute',
           top: 0,
@@ -28,17 +29,19 @@ const Home: FC<HomeProps> = () => {
       >
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.175 }}
-          transition={{ duration: 1.0, delay: 2.75 }}
+          animate={{ opacity: 0.35 }}
+          transition={{ duration: 2, delay: 3 }}
           style={{
             width: '100%',
             height: '100%',
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
             // background:
-            //   'linear-gradient(to bottom, transparent, 75%, black), url("https://s3.amazonaws.com/laynebritton.net-media/public/rosebud_trail_lowered_png.png") no-repeat center center'
+            //   'linear-gradient(to bottom, transparent, 55%, black), url("https://s3.amazonaws.com/laynebritton.net-media/public/rosebud_trail_lowered_png.png") no-repeat center center'
+            // background:
+            //   'linear-gradient(to bottom, transparent, 70%, black), url("https://s3.amazonaws.com/laynebritton.net-media/public/cold_spring_starry_sky_png_lower.png") no-repeat center center'
             background:
-              'linear-gradient(to bottom, transparent, 70%, black), url("https://s3.amazonaws.com/laynebritton.net-media/public/cold_spring_starry_sky_png_lower.png") no-repeat center center'
+              'linear-gradient(to bottom, transparent, 45%, black), url("https://s3.amazonaws.com/laynebritton.net-media/public/nyc_fidi_from_brooklyn.png") no-repeat center center'
           }}
         ></motion.div>
       </div>
