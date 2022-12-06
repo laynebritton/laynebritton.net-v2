@@ -30,7 +30,7 @@ const Home: FC<HomeProps> = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.35 }}
-          transition={{ duration: 2, delay: 3 }}
+          transition={{ duration: 2, delay: 1.75 }}
           style={{
             width: '100%',
             height: '100%',
