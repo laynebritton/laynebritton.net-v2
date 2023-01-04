@@ -91,7 +91,7 @@ const Resume: FC = () => {
           <br />
           <p>
             {
-              "Right now I'm a Software Engineer at Ribbon Home, building a platform to help regular people win offers on homes against investment banks and house flippers."
+              'Most recently I was a Software Engineer at Ribbon Home, building a platform to help regular people win offers on homes against investment banks and house flippers.'
             }
           </p>
           <br />
@@ -100,6 +100,15 @@ const Resume: FC = () => {
               'I previously worked at BCG Digital Ventures where I built, launched, and handed-off startups to our clients. Before that I was at the Japan Research Institute America, upgrading and developing financial systems. Learn more in my resume.'
             }
           </p>
+          <br />
+          <span>
+            <p>
+              {"I'm"} passionate about engineering quality and extensible
+              products that improve lives. My favorite tech stack is React
+              Typescript with Python or Java. My favorite engineering book is{' '}
+              <i>Clean Code</i> by Bob Martin.
+            </p>
+          </span>
           <br />
           <p>
             {
