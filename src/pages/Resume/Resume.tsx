@@ -30,7 +30,7 @@ const Resume: FC = () => {
 
             <br />
 
-            <h5>{'Software engineer at Ribbon Home'}</h5>
+            <h5>{'Software Engineer'}</h5>
             <h5>{'B.A. in Computer Science, Columbia University'}</h5>
 
             <br />
@@ -91,13 +91,13 @@ const Resume: FC = () => {
           <br />
           <p>
             {
-              'Most recently I was a Software Engineer at Ribbon Home, building a platform to help regular people win offers on homes against investment banks and house flippers.'
+              'I am currently a Software Engineer at Yahoo, working on platform engineering.'
             }
           </p>
           <br />
           <p>
             {
-              'I previously worked at BCG Digital Ventures where I built, launched, and handed-off startups to our clients. Before that I was at the Japan Research Institute America, upgrading and developing financial systems. Learn more in my resume.'
+              'I previously was a Software Engineer at Ribbon Home, building a platform to help regular people win offers on homes against investment banks and house flippers. I also spent time at BCG Digital Ventures where I built, launched, and handed-off startups to our clients. Before then I was at the Japan Research Institute America, upgrading and developing financial systems. Learn more in my resume.'
             }
           </p>
           <br />
@@ -112,7 +112,7 @@ const Resume: FC = () => {
           <br />
           <p>
             {
-              "Very interested in how technology intersects with society. Areas of interest are urban development, sustainability, education, and political activism. Please reach out if you know of any interesting projects there, especially if it's open source!"
+              "Very interested in how technology intersects with society. Areas of interest are urban development, sustainability, cosmology, education, and political activism. Please reach out if you know of any interesting projects in these spaces, especially if they're open source!"
             }
           </p>
         </ResponsiveContent>

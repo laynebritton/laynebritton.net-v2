@@ -24,8 +24,6 @@ const Contact: FC = () => {
         </a>{' '}
       </h2>
       <br />
-
-      <h2>Phone: 971-999-1749</h2>
     </ResponsiveContent>
   );
 };
