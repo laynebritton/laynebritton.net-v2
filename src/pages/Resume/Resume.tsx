@@ -181,6 +181,33 @@ const Resume: FC = () => {
                 githubUrl={'https://github.com/laynebritton/lit-hum-game'}
                 eventName={ANALYTICS_CONSTANTS.CLICK_LIT_HUM_GAME}
               />
+              <ProjectCard
+                title={'JL Fast Treecapitator'}
+                description={
+                  <>
+                    <span>
+                      An open-source mod for{' '}
+                      <a href="https://www.minecraft.net/en-us" target="_">
+                        Minecraft
+                      </a>{' '}
+                      to chop down trees and mine ore in one swoop. Runs on all
+                      platforms and consoles. Written in TypeScript. Utilizes
+                      modified Depth-first-search for better speed and hardware
+                      performance than comparable mods.
+                    </span>
+                  </>
+                }
+                media={
+                  'https://user-images.githubusercontent.com/21363865/253672687-ad5bfb36-c16f-40e8-853f-b1d7cdb4e88d.gif'
+                }
+                // projectUrl={
+                //   'https://github.com/laynebritton/jl-fast-treecapitator'
+                // }
+                githubUrl={
+                  'https://github.com/laynebritton/jl-fast-treecapitator'
+                }
+                eventName={ANALYTICS_CONSTANTS.CLICK_LIT_HUM_GAME}
+              />
               {/* <ProjectCard
                 title={'QuickAttunement for Foundry Virtual Table Top'}
                 description={
