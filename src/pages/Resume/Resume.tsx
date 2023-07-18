@@ -91,7 +91,7 @@ const Resume: FC = () => {
           <br />
           <p>
             {
-              'I am currently a Software Engineer at Yahoo, working on platform engineering.'
+              'I am currently a Software Engineer at Yahoo, working on platform engineering. Right now I primarily work on a NoSQL database with millions of reads & writes per second.'
             }
           </p>
           <br />
