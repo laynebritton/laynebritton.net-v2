@@ -1,5 +1,6 @@
 * {
   color: #fff;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -43,4 +44,16 @@
 
 body {
   overflow-x: hidden;
+}
+
+#resume {
+  scroll-margin-top: 10vh;
+}
+
+#projects {
+  scroll-margin-top: 10vh;
+}
+
+#contact {
+  scroll-margin-top: 10vh;
 }

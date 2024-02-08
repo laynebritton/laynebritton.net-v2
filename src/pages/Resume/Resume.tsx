@@ -15,11 +15,10 @@ const GoogleDriveResumeLink =
 
 const GitHubLink = 'https://github.com/laynebritton';
 
-const LinkedInLink = 'https://www.linkedin.com/in/layne-britton-85339b149/';
+export const LinkedInLink =
+  'https://www.linkedin.com/in/layne-britton-85339b149/';
 
 const Resume: FC = () => {
-  TrackEvent(ANALYTICS_CONSTANTS.VIEW_ABOUT);
-
   return (
     <>
       <Container>
@@ -82,7 +81,6 @@ const Resume: FC = () => {
           </Col>
         </Row>
         <ResponsiveContent type={ResponsiveContentType.ROW}>
-          <h2>Bio</h2>
           <p>
             {
               "Hello! My name is Layne. I'm an engineer currently living in Brooklyn, NY."
@@ -200,13 +198,10 @@ const Resume: FC = () => {
                 media={
                   'https://user-images.githubusercontent.com/21363865/253672687-ad5bfb36-c16f-40e8-853f-b1d7cdb4e88d.gif'
                 }
-                // projectUrl={
-                //   'https://github.com/laynebritton/jl-fast-treecapitator'
-                // }
                 githubUrl={
                   'https://github.com/laynebritton/jl-fast-treecapitator'
                 }
-                eventName={ANALYTICS_CONSTANTS.CLICK_LIT_HUM_GAME}
+                eventName={ANALYTICS_CONSTANTS.CLICK_JL_TREE_CAP}
               />
               {/* <ProjectCard
                 title={'QuickAttunement for Foundry Virtual Table Top'}

@@ -4,6 +4,8 @@ import Hero from '../../components/Hero/Hero';
 import styles from './Home.module.css';
 import { TrackEvent } from '../../util/Analytics';
 import * as ANALYTICS_CONSTANTS from '../../util/AnalyticsConstants';
+import Resume from '../Resume/Resume';
+import Contact from '../Contact/Contact';
 
 interface HomeProps {}
 
@@ -12,6 +14,7 @@ const Home: FC<HomeProps> = () => {
   return (
     <>
       <div
+        id="home"
         // Hide background image on mobile
         className={'d-none d-sm-block'}
         style={{
@@ -48,6 +51,9 @@ const Home: FC<HomeProps> = () => {
       <div className={styles.Home} data-testid="Home">
         <Hero />
       </div>
+      <span id="resume" />
+      <Resume />
+      <Contact />
     </>
   );
 };

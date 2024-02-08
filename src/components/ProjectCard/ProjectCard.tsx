@@ -39,7 +39,7 @@ export const ProjectCard = ({
           </>
         )}
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title style={{ color: 'white' }}>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
           {projectUrl && (
             <>

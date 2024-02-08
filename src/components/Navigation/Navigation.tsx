@@ -11,10 +11,10 @@ const Navigation: FC<NavigationProps> = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href={ROUTES.HOME}>Home </Nav.Link>
-          <Nav.Link href={ROUTES.RESUME}>About me</Nav.Link>
-          <Nav.Link href={ROUTES.CONTACT}>Contact</Nav.Link>
-          {/* <Nav.Link href={ROUTES.ARCHIVE}>Archive</Nav.Link> */}
+          <Nav.Link href={ROUTES.HOME_ANCHOR}>laynebritton.net</Nav.Link>
+          <Nav.Link href={ROUTES.RESUME_ANCHOR}>About</Nav.Link>
+          <Nav.Link href={ROUTES.PROJECTS_ANCHOR}>Projects</Nav.Link>
+          <Nav.Link href={ROUTES.CONTACT_ANCHOR}>Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
