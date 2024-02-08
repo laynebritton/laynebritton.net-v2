@@ -16,7 +16,7 @@ const Home: FC<HomeProps> = () => {
       <div
         id="home"
         // Hide background image on mobile
-        className={'d-none d-sm-block'}
+        // className={'d-none d-sm-block'}
         style={{
           position: 'absolute',
           top: 0,
