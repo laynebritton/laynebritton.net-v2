@@ -15,7 +15,8 @@ const GoogleDriveResumeLink =
 
 const GitHubLink = 'https://github.com/laynebritton';
 
-const LinkedInLink = 'https://www.linkedin.com/in/layne-britton-85339b149/';
+export const LinkedInLink =
+  'https://www.linkedin.com/in/layne-britton-85339b149/';
 
 const Resume: FC = () => {
   TrackEvent(ANALYTICS_CONSTANTS.VIEW_ABOUT);
@@ -82,7 +83,6 @@ const Resume: FC = () => {
           </Col>
         </Row>
         <ResponsiveContent type={ResponsiveContentType.ROW}>
-          <h2>Bio</h2>
           <p>
             {
               "Hello! My name is Layne. I'm an engineer currently living in Brooklyn, NY."

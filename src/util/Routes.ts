@@ -3,3 +3,7 @@ export const RESUME = '/resume';
 export const PROJECTS = '/resume#projects';
 export const CONTACT = '/contact';
 export const ARCHIVE = '/archive';
+export const HOME_ANCHOR = '#home';
+export const RESUME_ANCHOR = '#resume';
+export const PROJECTS_ANCHOR = '#projects';
+export const CONTACT_ANCHOR = '#contact';

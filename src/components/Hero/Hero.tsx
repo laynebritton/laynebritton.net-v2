@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import * as ROUTES from '../../util/Routes';
 import { SitePrimaryButton } from '../../theme/theme';
+import { NudgeDownArrow } from '../NudgeDownArrow/NudgeDownArrow';
 
 interface HeroProps {}
 
@@ -16,7 +17,7 @@ const Hero: FC<HeroProps> = () => (
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              height: '80vh'
+              height: '100vh'
             }}
           >
             <div
@@ -56,12 +57,18 @@ const Hero: FC<HeroProps> = () => (
               >
                 <Row>
                   <Col xs="6">
-                    <Button href={ROUTES.RESUME} style={SitePrimaryButton}>
+                    <Button
+                      href={ROUTES.RESUME_ANCHOR}
+                      style={SitePrimaryButton}
+                    >
                       About me
                     </Button>
                   </Col>
                   <Col xs="6">
-                    <Button href={ROUTES.PROJECTS} style={SitePrimaryButton}>
+                    <Button
+                      href={ROUTES.PROJECTS_ANCHOR}
+                      style={SitePrimaryButton}
+                    >
                       Projects
                     </Button>
                   </Col>
@@ -71,6 +78,7 @@ const Hero: FC<HeroProps> = () => (
           </div>
         </Col>
       </Row>
+      <NudgeDownArrow />
     </Container>
   </>
 );
