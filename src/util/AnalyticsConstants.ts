@@ -11,3 +11,4 @@ export const CLICK_INFINITE_DOGS = 'Click Infinite Dogs';
 export const CLICK_LAYNE_BRITTON_NET = 'Click laynebritton.net';
 export const CLICK_LIT_HUM_GAME = 'Click Lit Hum Game';
 export const CLICK_QUICK_ATTUNEMENT = 'Click quick attunement';
+export const CLICK_JL_TREE_CAP = 'Click JL Fast Treecapitator';

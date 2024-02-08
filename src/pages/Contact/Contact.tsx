@@ -14,7 +14,7 @@ const Contact: FC = () => {
       <h3 id="contact" style={{ marginTop: '15vh' }}>
         Contact
       </h3>
-      <h4>
+      <h5>
         <a
           href={LinkedInLink}
           onClick={() => {
@@ -23,8 +23,8 @@ const Contact: FC = () => {
         >
           LinkedIn
         </a>
-      </h4>
-      <h4>
+      </h5>
+      <h5>
         <details>
           <summary>email</summary>
           <a
@@ -36,7 +36,7 @@ const Contact: FC = () => {
             layne@laynebritton.net
           </a>
         </details>
-      </h4>
+      </h5>
       <br />
     </ResponsiveContent>
   );
