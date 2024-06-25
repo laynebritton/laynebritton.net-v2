@@ -9,6 +9,7 @@ import {
   ResponsiveContentType
 } from '../../components/ResponsiveContent/ResponsiveContent';
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
+import * as ROUTES from '../../util/Routes';
 
 const GoogleDriveResumeLink =
   'https://docs.google.com/document/d/1ntg-qp8GKCgLZqkCdXmn6jiNTcvupTqnP4o6Cp7Zqe4/edit';
@@ -88,30 +89,38 @@ const Resume: FC = () => {
           </p>
           <br />
           <p>
-            {
-              'I am currently a Software Engineer at Yahoo, working on platform engineering. Right now I primarily work on a NoSQL database with millions of reads & writes per second.'
-            }
+            I am currently a Software Engineer at Yahoo, working on platform
+            engineering. I primarily work on a globally distributed NoSQL
+            database with
+            <b> millions</b> of reads & writes per second.
           </p>
           <br />
           <p>
-            {
-              'I previously was a Software Engineer at Ribbon Home, building a platform to help regular people win offers on homes against investment banks and house flippers. I also spent time at BCG Digital Ventures where I built, launched, and handed-off startups to our clients. Before then I was at the Japan Research Institute America, upgrading and developing financial systems. Learn more in my resume.'
-            }
+            Before Yahoo, I was Software Engineer at Ribbon Home, building a web
+            platform to help regular people win offers on homes against
+            investment banks and house flippers. I also spent time at BCG
+            Digital Ventures where I built, launched, and handed-off healthtech
+            startups to our clients. Before then I was at the Japan Research
+            Institute America, upgrading and developing financial systems. Learn
+            more in my <a href={ROUTES.RESUME_ANCHOR}>resume.</a>
           </p>
           <br />
           <span>
             <p>
               {"I'm"} passionate about engineering quality and extensible
-              products that improve lives. My favorite tech stack is React
-              Typescript with Python or Java. My favorite engineering book is{' '}
+              products that improve lives. My favorite front-end framework right
+              now is React Typescript. I enjoy working in back-end Java,
+              Javascript, Python, and C#. My favorite engineering design book is{' '}
               <i>Clean Code</i> by Bob Martin.
             </p>
           </span>
           <br />
           <p>
-            {
-              "Very interested in how technology intersects with society. Areas of interest are urban development, sustainability, cosmology, education, and political activism. Please reach out if you know of any interesting projects in these spaces, especially if they're open source!"
-            }
+            Outside of work I love building interesting engineering projects. I
+            enjoy exploring the intersection of technology and urban
+            development, sustainability, cosmology, education, gaming, and
+            political activism. Please reach out if you know of any interesting
+            projects in these spaces, especially if they&#39;re open source!
           </p>
         </ResponsiveContent>
         {/* Placing empty div here for better navigation auto-scroll */}
@@ -126,16 +135,57 @@ const Resume: FC = () => {
           <Col xs={10} sm={10}>
             <Row>
               <ProjectCard
-                title={'Infinite Dogs'}
+                title={'JL Fast Treecapitator'}
                 description={
-                  'Scroll through dogs instead of doomscrolling. I loved the designs and theming I created for this, so I updated this site to use them too!'
+                  <>
+                    <span>
+                      An open-source mod for{' '}
+                      <a href="https://www.minecraft.net/en-us" target="_">
+                        Minecraft
+                      </a>{' '}
+                      to chop down trees and mine ore in one swoop. Runs on all
+                      platforms and consoles. <b>20+ active users.</b> Written
+                      in TypeScript. Utilizes optimized Depth-first-search for
+                      faster speed and hardware performance than comparable
+                      mods.
+                    </span>
+                  </>
                 }
                 media={
-                  'https://s3.amazonaws.com/laynebritton.net-media/public/infinite-dogs-square-thumbnail.png'
+                  'https://user-images.githubusercontent.com/21363865/253672687-ad5bfb36-c16f-40e8-853f-b1d7cdb4e88d.gif'
                 }
-                projectUrl={'https://laynebritton.github.io/dog-project/'}
-                githubUrl={'https://github.com/laynebritton/dog-project'}
-                eventName={ANALYTICS_CONSTANTS.CLICK_INFINITE_DOGS}
+                githubUrl={
+                  'https://github.com/laynebritton/jl-fast-treecapitator'
+                }
+                eventName={ANALYTICS_CONSTANTS.CLICK_JL_TREE_CAP}
+              />
+              <ProjectCard
+                title={'Lit Hum: The Fighting Game'}
+                description={
+                  <>
+                    <span>
+                      A 2D fighting video game featuring classic literature
+                      protagonists. Winner of the{' '}
+                      <a
+                        href="https://www.college.columbia.edu/core/scholars/reflection/4135"
+                        target="_"
+                      >
+                        2020 Core Scholar award at Columbia University
+                      </a>
+                      . Built in a custom game engine I created from scratch and
+                      with art I spliced together from the MET, paintings, and
+                      book covers.
+                    </span>
+                  </>
+                }
+                media={
+                  'http://www.columbia.edu/~lmb2289/lit-hum-game/images/troy-battle.JPG'
+                }
+                projectUrl={
+                  'https://www.college.columbia.edu/core/scholars/reflection/4135'
+                }
+                githubUrl={'https://github.com/laynebritton/lit-hum-game'}
+                eventName={ANALYTICS_CONSTANTS.CLICK_LIT_HUM_GAME}
               />
               <ProjectCard
                 title={'LayneBritton.net'}
@@ -153,55 +203,16 @@ const Resume: FC = () => {
                 eventName={ANALYTICS_CONSTANTS.CLICK_LAYNE_BRITTON_NET}
               />
               <ProjectCard
-                title={'Lit Hum: The Fighting Game'}
+                title={'Infinite Dogs'}
                 description={
-                  <>
-                    <span>
-                      A 2D fighting video game featuring classic literature
-                      protagonists. Winner of the{' '}
-                      <a
-                        href="https://www.college.columbia.edu/core/scholars/reflection/4135"
-                        target="_"
-                      >
-                        2020 Core Scholar award at Columbia University
-                      </a>
-                      . Built in a custom game engine I wrote and with art I
-                      spliced together from the MET, paintings, and book covers.
-                    </span>
-                  </>
+                  'Scroll through dogs instead of doomscrolling. I loved the designs and theming I created for this, so I updated this site to use them too!'
                 }
                 media={
-                  'http://www.columbia.edu/~lmb2289/lit-hum-game/images/troy-battle.JPG'
+                  'https://s3.amazonaws.com/laynebritton.net-media/public/infinite-dogs-square-thumbnail.png'
                 }
-                projectUrl={
-                  'https://www.college.columbia.edu/core/scholars/reflection/4135'
-                }
-                githubUrl={'https://github.com/laynebritton/lit-hum-game'}
-                eventName={ANALYTICS_CONSTANTS.CLICK_LIT_HUM_GAME}
-              />
-              <ProjectCard
-                title={'JL Fast Treecapitator'}
-                description={
-                  <>
-                    <span>
-                      An open-source mod for{' '}
-                      <a href="https://www.minecraft.net/en-us" target="_">
-                        Minecraft
-                      </a>{' '}
-                      to chop down trees and mine ore in one swoop. Runs on all
-                      platforms and consoles. Written in TypeScript. Utilizes
-                      modified Depth-first-search for better speed and hardware
-                      performance than comparable mods.
-                    </span>
-                  </>
-                }
-                media={
-                  'https://user-images.githubusercontent.com/21363865/253672687-ad5bfb36-c16f-40e8-853f-b1d7cdb4e88d.gif'
-                }
-                githubUrl={
-                  'https://github.com/laynebritton/jl-fast-treecapitator'
-                }
-                eventName={ANALYTICS_CONSTANTS.CLICK_JL_TREE_CAP}
+                projectUrl={'https://laynebritton.github.io/dog-project/'}
+                githubUrl={'https://github.com/laynebritton/dog-project'}
+                eventName={ANALYTICS_CONSTANTS.CLICK_INFINITE_DOGS}
               />
               {/* <ProjectCard
                 title={'QuickAttunement for Foundry Virtual Table Top'}
