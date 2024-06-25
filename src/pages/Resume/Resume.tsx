@@ -126,31 +126,29 @@ const Resume: FC = () => {
           <Col xs={10} sm={10}>
             <Row>
               <ProjectCard
-                title={'Infinite Dogs'}
+                title={'JL Fast Treecapitator'}
                 description={
-                  'Scroll through dogs instead of doomscrolling. I loved the designs and theming I created for this, so I updated this site to use them too!'
+                  <>
+                    <span>
+                      An open-source mod for{' '}
+                      <a href="https://www.minecraft.net/en-us" target="_">
+                        Minecraft
+                      </a>{' '}
+                      to chop down trees and mine ore in one swoop. Runs on all
+                      platforms and consoles. <b>20+ active users.</b> Written
+                      in TypeScript. Utilizes modified Depth-first-search for
+                      better speed and hardware performance than comparable
+                      mods.
+                    </span>
+                  </>
                 }
                 media={
-                  'https://s3.amazonaws.com/laynebritton.net-media/public/infinite-dogs-square-thumbnail.png'
+                  'https://user-images.githubusercontent.com/21363865/253672687-ad5bfb36-c16f-40e8-853f-b1d7cdb4e88d.gif'
                 }
-                projectUrl={'https://laynebritton.github.io/dog-project/'}
-                githubUrl={'https://github.com/laynebritton/dog-project'}
-                eventName={ANALYTICS_CONSTANTS.CLICK_INFINITE_DOGS}
-              />
-              <ProjectCard
-                title={'LayneBritton.net'}
-                description={
-                  'This website. Built in React Typescript. Includes internal analytics. Hosted using Google Cloud. Check it out on mobile and desktop.'
-                }
-                media={
-                  'https://s3.amazonaws.com/laynebritton.net-media/public/square-analytics-thumbnail.png'
-                }
-                projectUrl={'http://www.laynebritton.net/'}
-                projectUrlLabel={'Recursion'}
                 githubUrl={
-                  'https://github.com/laynebritton/laynebritton.net-v2'
+                  'https://github.com/laynebritton/jl-fast-treecapitator'
                 }
-                eventName={ANALYTICS_CONSTANTS.CLICK_LAYNE_BRITTON_NET}
+                eventName={ANALYTICS_CONSTANTS.CLICK_JL_TREE_CAP}
               />
               <ProjectCard
                 title={'Lit Hum: The Fighting Game'}
@@ -180,28 +178,31 @@ const Resume: FC = () => {
                 eventName={ANALYTICS_CONSTANTS.CLICK_LIT_HUM_GAME}
               />
               <ProjectCard
-                title={'JL Fast Treecapitator'}
+                title={'LayneBritton.net'}
                 description={
-                  <>
-                    <span>
-                      An open-source mod for{' '}
-                      <a href="https://www.minecraft.net/en-us" target="_">
-                        Minecraft
-                      </a>{' '}
-                      to chop down trees and mine ore in one swoop. Runs on all
-                      platforms and consoles. Written in TypeScript. Utilizes
-                      modified Depth-first-search for better speed and hardware
-                      performance than comparable mods.
-                    </span>
-                  </>
+                  'This website. Built in React Typescript. Includes internal analytics. Hosted using Google Cloud. Check it out on mobile and desktop.'
                 }
                 media={
-                  'https://user-images.githubusercontent.com/21363865/253672687-ad5bfb36-c16f-40e8-853f-b1d7cdb4e88d.gif'
+                  'https://s3.amazonaws.com/laynebritton.net-media/public/square-analytics-thumbnail.png'
                 }
+                projectUrl={'http://www.laynebritton.net/'}
+                projectUrlLabel={'Recursion'}
                 githubUrl={
-                  'https://github.com/laynebritton/jl-fast-treecapitator'
+                  'https://github.com/laynebritton/laynebritton.net-v2'
                 }
-                eventName={ANALYTICS_CONSTANTS.CLICK_JL_TREE_CAP}
+                eventName={ANALYTICS_CONSTANTS.CLICK_LAYNE_BRITTON_NET}
+              />
+              <ProjectCard
+                title={'Infinite Dogs'}
+                description={
+                  'Scroll through dogs instead of doomscrolling. I loved the designs and theming I created for this, so I updated this site to use them too!'
+                }
+                media={
+                  'https://s3.amazonaws.com/laynebritton.net-media/public/infinite-dogs-square-thumbnail.png'
+                }
+                projectUrl={'https://laynebritton.github.io/dog-project/'}
+                githubUrl={'https://github.com/laynebritton/dog-project'}
+                eventName={ANALYTICS_CONSTANTS.CLICK_INFINITE_DOGS}
               />
               {/* <ProjectCard
                 title={'QuickAttunement for Foundry Virtual Table Top'}
