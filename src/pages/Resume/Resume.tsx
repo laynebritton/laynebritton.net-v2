@@ -89,38 +89,42 @@ const Resume: FC = () => {
           </p>
           <br />
           <p>
-            I am currently a Software Engineer at Yahoo, working on platform
-            engineering. I primarily work on a globally distributed NoSQL
-            database with
-            <b> millions</b> of reads & writes per second.
+            Right now I{"'"}m a software engineer at Amazon, working in Amazon
+            Ads. I work in global big data, optimizing ad performance for
+            advertisers on Amazon.com through robust data pipelines.
           </p>
           <br />
           <p>
-            Before Yahoo, I was Software Engineer at Ribbon Home, building a web
-            platform to help regular people win offers on homes against
-            investment banks and house flippers. I also spent time at BCG
-            Digital Ventures where I built, launched, and handed-off healthtech
-            startups to our clients. Before then I was at the Japan Research
-            Institute America, upgrading and developing financial systems. Learn
-            more in my <a href={ROUTES.RESUME_ANCHOR}>resume.</a>
+            Before Amazon, I was at Yahoo, working on platform engineering. I
+            primarily worked on a globally distributed NoSQL database with
+            <b> millions</b> of reads & writes per second. Prior to that, I was
+            a Software Engineer at Ribbon Home, building a web platform to help
+            regular people win offers on homes against investment banks and
+            house flippers. I also spent time at BCG Digital Ventures where I
+            built, launched, and handed-off healthtech startups to our clients.
+            Before then I was at the Japan Research Institute America, upgrading
+            and developing financial systems. Learn more about these experiences
+            in my <a href={ROUTES.RESUME_ANCHOR}>resume.</a>
           </p>
           <br />
           <span>
             <p>
               {"I'm"} passionate about engineering quality and extensible
-              products that improve lives. My favorite front-end framework right
-              now is React Typescript. I enjoy working in back-end Java,
+              products that improve lives. My front-end framework of choice
+              nowadays is React Typescript. I enjoy working in back-end Java,
               Javascript, Python, and C#. My favorite engineering design book is{' '}
               <i>Clean Code</i> by Bob Martin.
             </p>
           </span>
           <br />
           <p>
-            Outside of work I love building interesting engineering projects. I
-            enjoy exploring the intersection of technology and urban
-            development, sustainability, cosmology, education, gaming, and
-            political activism. Please reach out if you know of any interesting
-            projects in these spaces, especially if they&#39;re open source!
+            Outside of work I love building interesting engineering projects.
+            I&#39;m always tinkering with something new. You can see some
+            published projects below. I enjoy exploring the intersection of
+            technology and urban development, public transportation,
+            sustainability, cosmology, education, gaming, and political
+            activism. I{"'"}d love to hear about exciting projects in these
+            spaces, especially open-source ones—feel free to reach out!
           </p>
         </ResponsiveContent>
         {/* Placing empty div here for better navigation auto-scroll */}
