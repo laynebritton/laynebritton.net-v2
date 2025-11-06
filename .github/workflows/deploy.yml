@@ -1,0 +1,54 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Verify build output exists
+        run: |
+          if [ ! -d "build" ] || [ -z "$(ls -A build)" ]; then
+            echo "❌ Build directory missing or empty. Aborting deploy."
+            exit 1
+          else
+            echo "✅ Build directory verified."
+          fi
+
+      - name: Clean old build on server
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.LBNET_GCP_HOST }}
+          username: ${{ secrets.LBNET_GCP_USER }}
+          key: ${{ secrets.LBNET_GCP_KEY }}
+          script: |
+            rm -rf /var/www/laynebritton.net-v2/build/*
+            echo "🧹 Old build directory cleared."
+
+      - name: Deploy new build to GCP server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.LBNET_GCP_HOST }}
+          username: ${{ secrets.LBNET_GCP_USER }}
+          key: ${{ secrets.LBNET_GCP_KEY }}
+          source: 'build/*'
+          target: '/var/www/laynebritton.net-v2/build'
