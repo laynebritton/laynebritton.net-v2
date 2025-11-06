@@ -89,22 +89,30 @@ const Resume: FC = () => {
           </p>
           <br />
           <p>
-            Right now I{"'"}m a software engineer at Amazon, working in Amazon
-            Ads. I work in global big data, optimizing ad performance for
-            advertisers on Amazon.com through robust data pipelines.
+            Right now I am a Senior Software Engineer at American Express,
+            building full-stack tools that automate and simplify corporate card
+            access and management.
           </p>
           <br />
           <p>
-            Before Amazon, I was at Yahoo, working on platform engineering. I
-            primarily worked on a globally distributed NoSQL database with
-            <b> millions</b> of reads & writes per second. Prior to that, I was
-            a Software Engineer at Ribbon Home, building a web platform to help
-            regular people win offers on homes against investment banks and
-            house flippers. I also spent time at BCG Digital Ventures where I
-            built, launched, and handed-off healthtech startups to our clients.
-            Before then I was at the Japan Research Institute America, upgrading
-            and developing financial systems. Learn more about these experiences
-            in my <a href={ROUTES.RESUME_ANCHOR}>resume.</a>
+            Before American Express I was at Amazon and Yahoo. At Amazon I
+            worked on data engineering for sponsored brands. I built data
+            pipelines that powered global search bidding and query signal
+            matching. At Yahoo I worked on platform engineering, primarily on a
+            globally distributed NoSQL database with
+            <b> millions</b> of reads & writes per second.
+            <br />
+          </p>
+          <p>
+            <br />
+            Further back, I was a Software Engineer at Ribbon Home, building a
+            web platform to help regular people win offers on homes against
+            investment banks and house flippers. I also spent time at BCG
+            Digital Ventures where I built, launched, and handed-off healthtech
+            startups to our clients. Before then I was at the Japan Research
+            Institute America, upgrading and developing financial systems. Learn
+            more about these experiences in my{' '}
+            <a href={ROUTES.RESUME_ANCHOR}>resume.</a>
           </p>
           <br />
           <span>
@@ -121,10 +129,10 @@ const Resume: FC = () => {
             Outside of work I love building interesting engineering projects.
             I&#39;m always tinkering with something new. You can see some
             published projects below. I enjoy exploring the intersection of
-            technology and urban development, public transportation,
-            sustainability, cosmology, education, gaming, and political
-            activism. I{"'"}d love to hear about exciting projects in these
-            spaces, especially open-source ones—feel free to reach out!
+            technology and urban development, quantum computing, public
+            transportation, sustainability, cosmology, education, gaming, and
+            political activism. I{"'"}d love to hear about exciting projects in
+            these spaces, especially open-source ones—feel free to reach out!
           </p>
         </ResponsiveContent>
         {/* Placing empty div here for better navigation auto-scroll */}
