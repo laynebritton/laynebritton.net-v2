@@ -51,4 +51,4 @@ jobs:
           username: ${{ secrets.LBNET_GCP_USER }}
           key: ${{ secrets.LBNET_GCP_KEY }}
           source: 'build/*'
-          target: '/var/www/laynebritton.net-v2/build'
+          target: '/var/www/laynebritton.net-v2/'
