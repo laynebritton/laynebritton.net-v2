@@ -2,7 +2,8 @@ name: Preview Deployment
 
 on:
   pull_request:
-
+    branches:
+      - main
 jobs:
   preview:
     runs-on: ubuntu-latest
@@ -22,6 +23,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: >
-            pages deploy dist
+            pages deploy build
             --project-name ${{ secrets.DEV_ENVIRONMENT_PROJECT }}
-            --branch pr-${{ github.event.number }}
+            --branch preview-pr-${{ github.event.number }}
