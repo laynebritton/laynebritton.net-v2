@@ -1,5 +1,7 @@
 # laynebritton.net
 
+Some arbitrary changes to test gha changes
+
 My home page website. Built from scratch using React Typescript. 
 
 Check it out at [laynebritton.net](https://www.laynebritton.net)
