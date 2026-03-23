@@ -12,7 +12,8 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+const defaultUrl = 'http://localhost:3000';
+const baseUrl = process.env.BASE_URL || defaultUrl;
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -77,6 +78,6 @@ export default defineConfig({
   webServer: {
     command: 'npm run start',
     url: baseUrl,
-    reuseExistingServer: !process.env.CI
+    reuseExistingServer: !process.env.CI || (baseUrl !== defaultUrl)
   }
 });
