@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('/');
   await expect(
     page.getByRole('heading', { name: 'Layne Britton' })
   ).toBeVisible();
@@ -29,7 +29,7 @@ test('external site buttons should render', async ({ page }) => {
   await expect(page.getByRole('button', { name: 'LinkedIn' })).toBeVisible();
 });
 
-test('clicking projects button naigates page to projects section', async ({
+test('clicking projects button navigates page to projects section', async ({
   page
 }) => {
   await page.getByRole('button', { name: 'Projects' }).click();

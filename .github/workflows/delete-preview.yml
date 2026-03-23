@@ -1,0 +1,20 @@
+name: Delete Preview Deployment
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  delete-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Delete Preview
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: >
+            pages deployment delete
+            preview-pr-${{ github.event.number }}
+            --project-name ${{ secrets.DEV_ENVIRONMENT_PROJECT }}
