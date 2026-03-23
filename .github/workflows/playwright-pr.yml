@@ -1,0 +1,17 @@
+name: Playwright PR Tests
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    uses: ./.github/workflows/playwright.yml
+    with:
+      base_url: http://localhost:3000
