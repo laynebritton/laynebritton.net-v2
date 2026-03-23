@@ -36,6 +36,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report-${{ inputs.base_url}}
+          name: playwright-report-${{ github.run_id }}
           path: playwright-report/
           retention-days: 30
