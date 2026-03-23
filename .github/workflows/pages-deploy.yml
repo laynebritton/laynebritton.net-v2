@@ -92,6 +92,9 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+            REACT_APP_ENVIRONMENT: ${{ secrets.REACT_APP_ENVIRONMENT }}
+            REACT_APP_MIXPANEL_ANALYTICS_TOKEN: ${{ secrets.REACT_APP_MIXPANEL_ANALYTICS_TOKEN }}
 
       - name: Deploy to PROD Pages
         uses: cloudflare/wrangler-action@v3
