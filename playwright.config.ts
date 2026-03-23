@@ -78,6 +78,6 @@ export default defineConfig({
   webServer: {
     command: 'npm run start',
     url: baseUrl,
-    reuseExistingServer: !process.env.CI || (baseUrl !== defaultUrl)
+    reuseExistingServer: !process.env.CI || baseUrl !== defaultUrl
   }
 });
