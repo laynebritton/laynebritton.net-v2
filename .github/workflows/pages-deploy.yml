@@ -1,5 +1,8 @@
 name: Deploy Pipeline
 
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
 on:
   push:
     branches:
@@ -58,7 +61,8 @@ jobs:
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-
+      - name: Wait for deployment
+        run: sleep 5
       - name: Run Playwright Tests (DEV)
         env:
           BASE_URL: https://dev.laynebritton.net
@@ -120,7 +124,8 @@ jobs:
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-
+      - name: Wait for deployment
+        run: sleep 5
       - name: Run Playwright Tests (PROD)
         env:
           BASE_URL: https://www.laynebritton.net

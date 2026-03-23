@@ -1,4 +1,8 @@
 name: Playwright Tests
+
+concurrency:
+  group: playwright-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 on:
   push:
     branches: [ main ]
