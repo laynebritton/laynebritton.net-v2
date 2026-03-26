@@ -6,6 +6,9 @@ on:
       base_url:
         required: true
         type: string
+      environment:
+        required: false
+        type: string
 
 jobs:
   test:
@@ -36,6 +39,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report-${{ github.job }}-${{ github.run_id }}
+          name: playwright-report-${{inputs.environment}}-${{ github.job }}-${{ github.run_id }}
           path: playwright-report/
           retention-days: 30

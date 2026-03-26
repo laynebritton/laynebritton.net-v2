@@ -50,6 +50,7 @@ jobs:
 
     with:
       base_url: https://dev.laynebritton.net
+      environment: dev
   deploy-prod:
     needs: test-dev
     runs-on: ubuntu-latest
@@ -91,3 +92,4 @@ jobs:
 
     with:
       base_url: https://www.laynebritton.net
+      environment: prod
