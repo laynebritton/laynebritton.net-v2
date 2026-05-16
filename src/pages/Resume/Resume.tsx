@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { SitePrimaryButton } from '../../theme/theme';
-import ProfilePicture from '../../img/layne.png';
+import ProfilePicture from '../../img/layne-2026.jpg';
 import { TrackEvent } from '../../util/Analytics';
 import * as ANALYTICS_CONSTANTS from '../../util/AnalyticsConstants';
 import {
