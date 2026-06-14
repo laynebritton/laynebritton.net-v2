@@ -38,6 +38,7 @@ const Resume: FC = () => {
             <Button
               href={GoogleDriveResumeLink}
               target="_blank"
+              rel="noopener noreferrer"
               style={SitePrimaryButton}
               onClick={() => {
                 TrackEvent(ANALYTICS_CONSTANTS.CLICK_RESUME);
@@ -51,6 +52,7 @@ const Resume: FC = () => {
             <Button
               href={GitHubLink}
               target="_blank"
+              rel="noopener noreferrer"
               style={SitePrimaryButton}
               onClick={() => {
                 TrackEvent(ANALYTICS_CONSTANTS.CLICK_GITHUB);
@@ -64,6 +66,7 @@ const Resume: FC = () => {
             <Button
               href={LinkedInLink}
               target="_blank"
+              rel="noopener noreferrer"
               style={SitePrimaryButton}
               onClick={() => {
                 TrackEvent(ANALYTICS_CONSTANTS.CLICK_LINKEDIN);
@@ -78,6 +81,7 @@ const Resume: FC = () => {
             <img
               style={{ width: '100%', borderRadius: '50%' }}
               src={ProfilePicture}
+              alt="Layne Britton"
             />
           </Col>
         </Row>
@@ -152,7 +156,11 @@ const Resume: FC = () => {
                   <>
                     <span>
                       An open-source mod for{' '}
-                      <a href="https://www.minecraft.net/en-us" target="_">
+                      <a
+                        href="https://www.minecraft.net/en-us"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Minecraft
                       </a>{' '}
                       to chop down trees and mine ore in one swoop. Runs on all
@@ -180,7 +188,8 @@ const Resume: FC = () => {
                       protagonists. Winner of the{' '}
                       <a
                         href="https://www.college.columbia.edu/core/scholars/reflection/4135"
-                        target="_"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         2020 Core Scholar award at Columbia University
                       </a>
