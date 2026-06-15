@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../../components/Hero/Hero';
 import styles from './Home.module.css';
@@ -10,7 +10,10 @@ import Contact from '../Contact/Contact';
 interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
-  TrackEvent(ANALYTICS_CONSTANTS.VIEW_HOME_PAGE);
+  useEffect(() => {
+    TrackEvent(ANALYTICS_CONSTANTS.VIEW_HOME_PAGE);
+  }, []);
+
   return (
     <>
       <div

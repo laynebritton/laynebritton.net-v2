@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { ResponsiveContent } from '../../components/ResponsiveContent/ResponsiveContent';
 import { TrackEvent } from '../../util/Analytics';
 import * as ANALYTICS_CONSTANTS from '../../util/AnalyticsConstants';
@@ -7,7 +7,9 @@ import { LinkedInLink } from '../Resume/Resume';
 const EmailLink = 'mailto:layne@laynebritton.net';
 
 const Contact: FC = () => {
-  // TrackEvent(ANALYTICS_CONSTANTS.VIEW_CONTACT);
+  useEffect(() => {
+    TrackEvent(ANALYTICS_CONSTANTS.VIEW_CONTACT);
+  }, []);
 
   return (
     <ResponsiveContent>

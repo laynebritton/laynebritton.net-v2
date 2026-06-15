@@ -24,7 +24,7 @@ export const ResponsiveContent = ({
       return (
         <Container>
           <Row>
-            <Col xs="1" className={'d-xs-block d-sm-none'}></Col>
+            <Col xs="1" className={'d-block d-sm-none'}></Col>
             <Col xs="10" sm="8">
               {children}
             </Col>
@@ -35,7 +35,7 @@ export const ResponsiveContent = ({
     case ResponsiveContentType.ROW:
       return (
         <Row>
-          <Col xs="1" className={'d-xs-block d-sm-none'}></Col>
+          <Col xs="1" className={'d-block d-sm-none'}></Col>
           <Col xs="10" sm="8">
             {children}
           </Col>
@@ -45,7 +45,7 @@ export const ResponsiveContent = ({
     case ResponsiveContentType.COLUMN:
       return (
         <>
-          <Col xs="1" className={'d-xs-block d-sm-none'}></Col>
+          <Col xs="1" className={'d-block d-sm-none'}></Col>
           <Col xs="10" sm="8">
             {children}
           </Col>

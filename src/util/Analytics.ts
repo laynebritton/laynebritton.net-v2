@@ -1,32 +1,25 @@
 import mixpanel from 'mixpanel-browser';
 
-let CURRENT_ENVIRONMENT: string;
-let ANALYTICS_TOKEN: string;
+const CURRENT_ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT || '';
+const ANALYTICS_TOKEN = process.env.REACT_APP_MIXPANEL_ANALYTICS_TOKEN || '';
+
+let initialized = false;
+
+const IsProductionEnvironment = () => CURRENT_ENVIRONMENT === 'prod';
 
 export const InitializeAnalytics = () => {
-  CURRENT_ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT || '';
-  ANALYTICS_TOKEN = process.env.REACT_APP_MIXPANEL_ANALYTICS_TOKEN || '';
-
-  if (!IsProductionEnvironment()) {
+  if (initialized || !IsProductionEnvironment() || !ANALYTICS_TOKEN) {
     return;
   }
 
-  if (ANALYTICS_TOKEN) {
-    mixpanel.init(ANALYTICS_TOKEN, { api_host: 'https://api.mixpanel.com' });
-  }
+  mixpanel.init(ANALYTICS_TOKEN, { api_host: 'https://api.mixpanel.com' });
+  initialized = true;
 };
 
 export const TrackEvent = (event: string) => {
-  if (!IsProductionEnvironment()) {
+  if (!initialized) {
     return;
   }
 
   mixpanel.track(event, { environment: CURRENT_ENVIRONMENT });
-};
-
-const IsProductionEnvironment = () => {
-  if (CURRENT_ENVIRONMENT === 'prod') {
-    return true;
-  }
-  return false;
 };

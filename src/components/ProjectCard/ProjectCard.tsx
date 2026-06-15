@@ -30,6 +30,7 @@ export const ProjectCard = ({
             <Card.Img
               variant="top"
               src={media}
+              alt={title}
               style={{
                 objectFit: 'cover',
                 width: '100%',
@@ -46,6 +47,7 @@ export const ProjectCard = ({
               <Button
                 href={projectUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 style={SitePrimaryButton}
                 onClick={() => {
                   TrackEvent(eventName);
@@ -60,6 +62,7 @@ export const ProjectCard = ({
               <Button
                 href={githubUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 style={SitePrimaryButton}
                 onClick={() => {
                   TrackEvent(eventName + ' GitHub');
